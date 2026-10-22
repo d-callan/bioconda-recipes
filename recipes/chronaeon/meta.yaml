@@ -62,5 +62,11 @@ about:
   dev_url: https://github.com/veg/HyphAeon
 
 extra:
+  container:
+    # Opt in to a CUDA-enabled mulled container: the environment is solved
+    # with CONDA_OVERRIDE_CUDA=99, so cuda-enabled package builds are
+    # selected. Older bioconda-utils versions ignore this key, and the
+    # resulting image still runs on CPU-only hosts.
+    cuda: true
   recipe-maintainers:
     - d-callan
